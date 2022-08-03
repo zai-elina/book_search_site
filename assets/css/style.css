@@ -1,0 +1,518 @@
+body{
+    margin:0;
+   font-family: 'Caveat', cursive;
+   
+    font-size:18px;
+    line-height:1.6;
+    color: #333;
+   background-color: #FFF5EE;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing:border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+}
+
+hr{
+    border:0;
+    width:100%;
+    height:1px;
+    margin :30px 0;
+    background-color:  #BC8F8F;
+}
+
+
+/*Контейнер*/
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+/*Шапка сайта */
+.header
+{
+    width:100%;
+   padding-top: 30px;
+    
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1000;
+}
+.header_inner{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-bottom:3px solid #BC8F8F;
+}
+
+.header_logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #696969;
+}
+/*Навигация*/
+.nav{
+    padding-top: 20px;
+    font-size:13px;
+    text-transform: uppercase;
+    font-family: 'Pacifico', cursive;
+}
+.nav_link{
+     vertical-align:top;
+     margin:0 10px;
+    
+    color:#696969;
+    text-decoration: none;
+    opacity:0.8;
+    transition: opacity 1s linear;
+}
+.active_nav{
+     vertical-align:top;
+     margin:0 10px;
+    
+    color:#333;
+    text-decoration: none;
+}
+.nav_link:hover{
+    text-decoration: underline;
+}
+/*Главная страница*/
+.intro
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+     width:100%;
+    height:100vh;
+    text-align: center;
+    
+    background:
+url("../images/intro.jpg") center no-repeat ;
+ 
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+.intro_inner{
+    width: 100%;
+    max-width:880px;
+    margin:0 auto;
+   
+    background: #fff;
+    opacity: 0.9;
+ 
+}
+.intro_title{
+    color:#FFC0CB;
+    font-size: 80px;
+    font-weight:700;
+    text-transform: uppercase;
+    line-height:1;
+    font-family: 'Caveat', cursive;
+    margin:20px 40px;
+    
+}
+
+
+/*О сайте*/
+.about{
+    padding: 200px 0;   
+}
+
+.about_header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.about_title{
+    font-size:50px;
+    font-weight: 700;
+    color:#696969;
+    font-family: 'Caveat', cursive;
+    text-transform: uppercase;
+}
+.about_title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto;
+
+    background-color: #BC8F8F;
+}
+.about_text{
+    font-size: 25px;
+    color: #999;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Жанры */
+.genres {
+    padding: 100px 0;
+}
+
+.genres_header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.genres_suptitle {
+    font-family: 'Marck Script', cursive;
+    font-size: 35px;
+    color: #696969;
+}
+
+.genres_title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #696969;
+    text-transform: uppercase;
+    font-family: 'Caveat', cursive;
+}
+
+.genres_title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto;
+
+    background-color: #BC8F8F;
+}
+
+/*Драма*/
+.drama{
+   display:flex; 
+
+}
+.drama_item{
+    width: 33%;
+    padding-right: 25px;
+    padding-left: 160px;
+    position: relative;
+}
+
+.drama_icon{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+.drama_title{
+    margin-bottom: 3px;
+    font-size: 20px;
+    color:#333;
+    text-transform: uppercase;
+}
+.drama_text{
+    font-size: 20px;
+}
+/*Психология*/
+.psychology{
+    display: flex;
+    flex-wrap:wrap;
+}
+.psychology_item{
+    width:33%;
+    height: 350px;
+    position:relative;
+    overflow: hidden; 
+    
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.psychology_item:hover .psychology_content{
+    opacity:1;
+}
+.psychology_image{
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index:1;
+    
+    transform: translate3d(-50%,-50%,0);
+}
+.psychology_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    
+    background-color:rgba(128,128,128, 0.9); 
+    opacity:0;   
+    transition: opacity 0.2s linear;
+    
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    
+}
+.psychology_title{
+    margin-bottom: 5px;
+    
+    font-size: 20px;
+    font-weight: 700;
+    color:#fff;
+    text-transform: uppercase;
+}
+.psychology_text{
+   color:#fff;
+    font-size: 18px;
+}
+
+/*Фэнтези*/
+.fantasy{
+    margin:auto;
+
+}
+.fantasy_inner{
+    display:flex;
+    flex-wrap: wrap;
+}
+.fantasy_item{
+    width: 25%;
+    padding: 0 15px;
+}
+.fantasy_title{
+    color:#333;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+.fantasy_text{
+    font-size:18px;
+    color: #333;
+}
+.fantasy_image{
+    margin-bottom: 20px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/*Ужасы*/
+.horor{
+    display: flex;
+    flex-wrap:wrap;
+}
+.horor_item{
+    width:33%;
+    height: 350px;
+    position:relative;
+    overflow: hidden; 
+    
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.horor_item:hover .horor_content{
+    opacity:1;
+}
+.horor_image{
+  position:absolute;
+    top:50%;
+    left:50%;
+    z-index:1;
+    
+    transform: translate3d(-50%,-50%,0);
+}
+.horor_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    
+    background-color:rgba(128,128,128, 0.9); 
+    opacity:0;   
+    transition: opacity 0.2s linear;
+    
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    
+}
+.horor_title{
+    margin-bottom: 5px;
+    
+    font-size: 20px;
+    font-weight: 700;
+    color:#fff;
+    text-transform: uppercase;
+}
+.horor_text{
+   color:#fff;
+    font-size: 18px;
+}
+
+
+/*Цитаты*/
+.quotes {
+    padding: 100px 0;
+}
+.quotes--gray {
+    background-color: #f8f8f8;
+}
+.quotes_title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #696969;
+    text-transform: uppercase;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+}
+
+.quotes_title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto;
+
+    background-color: #BC8F8F;
+}
+.quotes_item{
+  padding: 28px 200px;
+    position: relative;
+}
+.quotes_photo{
+    border: 2px solid #BC8F8F;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+.quotes_text{
+    margin-bottom: 15px;
+    
+    font-size: 25px;
+    font-weight: 300;
+    font-family: 'Noto Sans JP', sans-serif;
+  
+}
+.quotes_author{
+    font-size: 24px;
+}
+
+/*Ссылки сайтов*/
+.information {
+    padding: 80px 0;
+}
+
+.information_header {
+    width: 100%;
+    max-width: 950px;
+    margin:  20px 100px;
+
+    text-align: center;
+}
+
+.information_title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #696969;
+    text-transform: uppercase;
+    font-family: 'Caveat', cursive;
+}
+
+.information_title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto;
+
+    background-color: #BC8F8F;
+}
+.information_text {
+    font-size: 20px;
+    color: #999;
+     font-family: 'Noto Sans JP', sans-serif;
+}
+.links{
+    display: flex;
+}
+.links_item{
+    width: 50%;
+}
+
+.text_item {
+    margin-bottom: 10px;
+    
+}
+
+.text_header {
+    padding: 15px 20px 15px 60px;
+    position: relative;
+
+}
+.text_title{
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+/*Экранизация*/
+.film {
+    padding: 100px 0;
+}
+
+.film_title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #696969;
+    text-transform: uppercase;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+}
+.film_title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto;
+
+    background-color: #BC8F8F;
+}
+.films{
+    display: flex;
+    flex-wrap: wrap;
+}
+.films_item{
+    width: 33%;
+    padding: 15px;
+     background: #fff;
+  
+    margin:2px;
+}
+.films_image{
+    display: block;
+    max-width: 100%;
+    height:auto;
+}
+.films_title{
+    color:#333;
+    font-size: 23px;
+    text-transform: uppercase; 
+}
+films_text{
+    font-size:18px;
+    color: #333;
+}
+
+
